@@ -11,6 +11,7 @@ To play the game: excecute `main.py`
  cd game
  python main.py
  ```
+#### Organization
 
                 ├── README.md
                 └── game       
