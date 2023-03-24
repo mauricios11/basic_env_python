@@ -7,7 +7,7 @@ These are notes for basic python envs usage including pip
 To play the game: excecute `main.py`
  * **dependencies**: `random`
 
- ```zsh
+ ```sh
  cd game
  python main.py
  ```
