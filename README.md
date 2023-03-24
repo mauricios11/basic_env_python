@@ -1,9 +1,9 @@
 # python basic projects 
 
-#### Description:
+### Description:
 These are notes for basic python envs usage including pip 
 
-##### project 1: game
+### project 1: game
 To play the game: excecute `main.py`
  * **dependencies**: `random`
 
@@ -11,7 +11,7 @@ To play the game: excecute `main.py`
  cd game
  python main.py
  ```
-#### Organization
+### Organization
 
                 ├── README.md
                 └── game       
