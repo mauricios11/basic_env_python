@@ -1,4 +1,4 @@
- # Project 1: Piedra:mount_fuji: papel:scroll: tijera:scissors: game
+ # Project 1: Piedra :mount_fuji:  papel :scroll:  tijera :scissors:  
  
 
  
