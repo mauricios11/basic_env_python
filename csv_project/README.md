@@ -9,7 +9,7 @@ El proyecto consiste en:
     - descargar un dataset de la población de los países
     - convertirlo en una lista de diccionarios
     - filtrar por países, continentes, y regiones(partes de un continente)
-    -  los elementos con gráficas tipo pie y tipo barra
+      - - los elementos con gráficas tipo pie y tipo barra
     
 ### Installation using pip3
 ```zsh
@@ -33,6 +33,8 @@ pip3 install -r requeriments.txt
                 │   └── utils.cpython-39.pyc
                 ├── data
                 │   └── data_population.csv
+                ├── env
+                │   ├── bin
                 ├── graficas.py
                 ├── main_population.py
                 ├── not_main.py
@@ -43,5 +45,8 @@ pip3 install -r requeriments.txt
                 │   ├── pie-Europe.png
                 │   └── pie_South America.png
                 ├── read_csv.py
+                ├── requeriments.txt
                 └── utils.py
+
+
 
