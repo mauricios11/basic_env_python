@@ -14,6 +14,7 @@ El proyecto consiste en:
 ### Installation using pip3
 ```zsh
 git clone # clonar proyecto
+python3 -m venv env # crear ambiente virtual 
 cd csv_project
 source env/bin/activate
 pip3 install -r requeriments.txt
