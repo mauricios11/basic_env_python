@@ -1,0 +1,9 @@
+services:
+  csv_project_using_pandas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+
+
+
