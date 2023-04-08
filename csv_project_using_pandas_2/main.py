@@ -20,7 +20,7 @@ def run():
     
     
     #input para el population_by_country de ƒ "utils"
-    file_name = "Chile"#input('Type country: ')#file_name = country
+    file_name = input('Type country: ')#file_name = country
     print(type(file_name), file_name)
     result = utils.population_by_country(data_filtered, file_name)
     
