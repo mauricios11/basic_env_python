@@ -2,22 +2,22 @@
 
 instalación del proyecto: 
 
-    - clonar proyecto (y abrir su contenido)
+- clonar proyecto (y abrir su contenido)
 
-    - crear y activar el ambiente
+- crear y activar el ambiente
 
-    - correr código
+- correr código
 
  
 El proyecto consiste en:
 
-    - descargar un dataset de la población de los países
+- descargar un dataset de la población de los países
 
-    - convertirlo en una lista de diccionarios
+- convertirlo en una lista de diccionarios
 
-    - filtrar por países, continentes, y regiones(partes de un continente)
+- filtrar por países, continentes, y regiones(partes de un continente)
 
-      - - los elementos con gráficas tipo pie y tipo barra
+   - - los elementos con gráficas tipo pie y tipo barra
     
 ### Installation using pip3
 ```zsh
