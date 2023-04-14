@@ -1,0 +1,12 @@
+# respecto al contenedor "Dockerfile" aqui se va a declarar:
+  #- cómo se va a iniciar 
+  #- desde dónde se va a iniciar 
+
+services:
+  csv_population:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/csv_population
+        

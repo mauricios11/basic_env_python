@@ -14,7 +14,7 @@ def pie_plot(labels, values):
     fig, ax = plt.subplots()
     plt.pie(values, labels = labels)
     plt.axis('equal')
-    plt.savefig(f'./img/pie_plot.png')
+    plt.savefig(f'./img/pie_population.png')
     plt.close()
 
     
@@ -24,5 +24,6 @@ if __name__ == "__main__":
     file_name = "practica"#input("Selecciona un país: ")
     bar_plot(file_name, labels ,values)
     pie_plot(labels , values)
+    print(' labels: ',labels , '  values: ', values)
 
     

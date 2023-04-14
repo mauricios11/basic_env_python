@@ -2,43 +2,52 @@
 
 import csv
 import matplotlib.pyplot as plt
-import utils
+#dado que estamos usando pandas, ya no necesitamos: import utils y import read_csv
 import graficas
-import read_csv as read
+
 import pandas as pd
 
+
 country = input('Type country: ').title()
+df = pd.read_csv('./data/data_population.csv')
 
 def plot_bar_countries():
     global country
-    data = read.read_csv("./data/data_population.csv")
-
-    print(country)
-    result = utils.population_by_country(data, country)
     
-    if len(result) > 0:
-        country = result[0]
-        print(country)
-        labels , values = utils.get_population(country)
+    df_filter_by_country = df.loc[df['Country/Territory'] == country]
+    print(df_filter_by_country)
+    #column_keys = values
+    column_keys = ['2022 Population','2020 Population','2015 Population','2010 Population','2000 Population','1990 Population','1980 Population']
+    
+    if len(df_filter_by_country) > 0:
+        values = pd.DataFrame(df_filter_by_country, columns = column_keys).values.flatten()
+        plt.bar(column_keys, values)
+        plt.savefig(f'./plot_imgs/bar_plot_{country}')
+        plt.close()
         
-        graficas.bar_population(country['Country/Territory'], labels, values)
+    else:
+        print("There's no country with that name")
+        
 
 def plot_pie():
-    continent = "Europe"
-    data = read.read_csv("./data/data_population.csv")
-    data_filtered = list(filter(lambda x : x["Continent"] == continent, data))
-    labels , values = utils.get_porcentaje(data_filtered)
+    continent = input('Type country: ').title()
+    filter_continent_df = df.loc[df["Continent"]== continent]
+    percent = filter_continent_df["World Population Percentage"]
+
+    country_list=[]
+    for country in filter_continent_df["Country/Territory"]:
+        country_list.append(country)
+        
+    print(percent)
     
     fig, ax = plt.subplots()
-    ax.pie(values , labels = labels)
+    ax.pie(percent , labels = country_list)
     plt.savefig(f"./plot_imgs/pie-{continent}.png")
     plt.close()
     
 def plot_propotion():
-    df = pd.read_csv('./data/data_population.csv')
-    
     #filtrar por región
-    region = input("Selecciona una región: ").title()
+    region = "Europe"#input("Selecciona una región: ").title()
     df_region = df[df['Continent'] == "region"]
     
     #porcentage de población en países (de la región seleccionada)

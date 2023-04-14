@@ -35,5 +35,6 @@ if __name__ == "__main__":
     country_dict = read.read_csv("../data/data_population.csv")
     porcentaje = get_porcentaje(country_dict)
     print(f' porcentajeasdlfkj : \n {porcentaje}')
+
     
    

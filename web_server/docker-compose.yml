@@ -1,0 +1,22 @@
+# respecto al contenedor "Dockerfile" aqui se va a declarar:
+  #- cómo se va a iniciar 
+  #- desde dónde se va a iniciar
+
+services:
+    server_web:
+      build:
+        context: .
+          #ejecutar "aquí => ."
+        dockerfile: Dockerfile
+          #especificar el nomber del dockerfile
+      volumes:
+        - .:/app
+          #realizar "live reloading" (para agregar los cambios al contenedor)
+      ports:
+          #especificamos los puertos que estaremos usando
+        - "80:80"
+
+
+
+
+
